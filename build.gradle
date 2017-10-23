@@ -12,7 +12,7 @@ dependencies {
   testCompile 'junit:junit:4.12'
 }
 
-task sequencehelp{
+task sequencehelp <<{
   println "Integer Sequence Project"
   println "Given and integer n as an argument, displays Tri(n) and LC(n)"
 }
