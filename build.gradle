@@ -1,0 +1,27 @@
+// Apply the java plugin to add support for Java
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = "halloran.IntegerSequenceProject"
+
+repositories {
+   mavenCentral()
+}
+
+dependencies {
+  testCompile 'junit:junit:4.12'
+}
+
+task sequencehelp{
+  println "Integer Sequence Project"
+  println "Given and integer n as an argument, displays Tri(n) and LC(n)"
+}
+
+run {
+  try {
+        systemProperties System.getProperties()
+        args System.getProperty("args").split()
+    } catch (Exception e) {
+        println "Please add -Dargs=\"...\" even if it is empty"
+    }
+}
